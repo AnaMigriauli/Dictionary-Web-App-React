@@ -1,8 +1,31 @@
+import useDictionaryContext from "../hooks/useDictionaryContext";
 const SearchInput = () => {
+  const { word, setWord } = useDictionaryContext();
+
+  const WordChangeHandler = (val) => {
+    setWord(val);
+  };
+  const SubmitHandler = (e) => {
+    e.preventDefault;
+    if (word.trim().length !== "") return;
+
+    setWord("");
+  };
   return (
-    <form className="w-327 h-48 bg-light-gray-01">
-      <input type="text" />
-      <button>
+    <form
+      onSubmit={SubmitHandler}
+      className="w-327 h-48 bg-light-gray-01 flex justify-between  pt-16 pr-24.45 pb-16.45 pl-24 rounded-lg"
+    >
+      <input
+        type="text"
+        placeholder=""
+        className=" bg-light-gray-01 w-5/6 outline-none text-base "
+        value={word}
+        onChange={(e) => {
+          WordChangeHandler(e.target.value);
+        }}
+      />
+      <button type="submit">
         <svg
           width="18"
           height="18"

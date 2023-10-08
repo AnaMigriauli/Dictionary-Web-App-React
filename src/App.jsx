@@ -1,8 +1,8 @@
 import "./App.css";
-import MainContainer from "./components/MainContainer";
+import DictionaryApp from "./components/MainContainer";
 
 function App() {
-  return <MainContainer />;
+  return <DictionaryApp />;
 }
 
 export default App;
