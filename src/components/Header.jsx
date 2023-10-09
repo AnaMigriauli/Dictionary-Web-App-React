@@ -13,10 +13,10 @@ const Header = () => {
 
         <div className="border-l border-light-gray h-32 mx-16 "></div>
         <div className="flex gap-12 ">
-          <div className=" w-40 h-20 bg-custom-gray flex items-center justify-start rounded-28">
+          <div className=" w-40 h-4 bg-custom-gray flex items-center justify-start rounded-28">
             <div className="w-14 h-14 bg-white rounded-full cursor-pointer ml-3"></div>
           </div>
-          <img src={moon} alt="moon" className="h-20" />
+          <img src={moon} alt="moon" className="h-4" />
         </div>
       </div>
     </div>

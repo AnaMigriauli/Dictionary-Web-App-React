@@ -6,7 +6,7 @@ const DictionaryContextProvider = ({ children }) => {
   const [word, setWord] = useState("keyboard");
 
   const value = { word, setWord };
-  console.log(word);
+
   return (
     <DictionaryContext.Provider value={value}>
       {children}

@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      listStyleType: {
+        disc: "disc",
+      },
       width: {
         40: "40px",
         14: "14px",
@@ -12,7 +15,7 @@ export default {
         98: "98px",
       },
       height: {
-        20: "20px",
+        1: "1px",
         14: "14px",
         24: "24px",
         32: "32px",
@@ -23,6 +26,8 @@ export default {
         "custom-gray": "#757575",
         "light-gray": "#E9E9E9",
         "light-gray-01": "#F4F4F4",
+        purple: "#8F19E8",
+        " black": "#2D2D2D",
       },
       spacing: {
         85: "85px",
