@@ -33,6 +33,7 @@ const Header = () => {
       "&:hover": {
         borderColor: "transparent",
       },
+      fontWeight: " 700",
     }),
     indicatorSeparator: () => ({
       display: "none",

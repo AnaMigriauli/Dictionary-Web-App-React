@@ -2,6 +2,7 @@ import Header from "./Header";
 import SearchInput from "./SearchInput";
 import WordDefinition from "./WordDefinition";
 import { DictionaryContextProvider } from "../contexts/DictionaryContext";
+import Loader from "./Loader";
 const DictionaryApp = () => {
   return (
     <DictionaryContextProvider>

@@ -32,6 +32,7 @@ export default {
         "dark-mode": "#050505",
         "light-black": "#1F1F1F",
         "black-01": "#3A3A3A",
+        red: "#FF5252",
       },
       spacing: {
         85: "85px",

@@ -2,24 +2,29 @@ import { useState, useEffect } from "react";
 import useDictionaryContext from "../hooks/useDictionaryContext";
 import audio from "../assets/images/player.svg";
 import Source from "./Source";
+import Error from "./Error";
+import Loader from "./Loader";
 //API
 const API = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 const WordDefinition = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(false);
+  const [loader, setLoader] = useState(false);
   const { word } = useDictionaryContext();
-
-  console.log(word);
 
   useEffect(() => {
     async function fetchData() {
+      setLoader(true);
       try {
         const response = await fetch(`${API}${word}`);
         const result = await response.json();
         setData(result);
+        setError(false);
       } catch (error) {
         setError(true);
+      } finally {
+        setLoader(false);
       }
     }
 
@@ -36,8 +41,11 @@ const WordDefinition = () => {
     audio && new Audio(audioURL).play();
   };
 
-  console.log(dataArr?.meanings[1]);
-  return (
+  return loader ? (
+    <Loader />
+  ) : error || dataArr === undefined ? (
+    <Error />
+  ) : (
     <div>
       <div className="flex justify-between items-center   mb-7">
         <div>
