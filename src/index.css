@@ -1,6 +1,27 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* @font-face {
+  font-family: "NotoSerif-Bold";
+  src: url("./assets/fonts/NotoSerif-Bold.ttf") format("ttf");
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap");
+.serif {
+  font-family: "Noto Serif", serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.mono {
+  font-family: "Space Mono", monospace;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +32,3 @@
   justify-content: center;
   align-items: center;
 }
-
-/* body {
-
-} */

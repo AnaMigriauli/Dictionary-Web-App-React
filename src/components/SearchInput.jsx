@@ -13,12 +13,12 @@ const SearchInput = () => {
   return (
     <form
       onSubmit={submitHandler}
-      className="w-327 h-48 bg-light-gray-01 flex justify-between  pr-24.45  pl-24 rounded-lg"
+      className="w-327 h-48 hover:border hover:border-solid hover:border-purple bg-light-gray-01 flex justify-between  pr-24.45  pl-24 rounded-2xl mb-6 dark:bg-light-black"
     >
       <input
         type="text"
         placeholder=""
-        className=" bg-light-gray-01 w-5/6 outline-none text-base "
+        className=" bg-light-gray-01 w-5/6 outline-none text-base font-bold  dark:bg-light-black dark:text-white"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />

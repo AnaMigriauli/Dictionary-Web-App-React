@@ -39,9 +39,11 @@ const WordDefinition = () => {
   console.log(dataArr?.meanings[1]);
   return (
     <div>
-      <div>
+      <div className="flex justify-between items-center   mb-7">
         <div>
-          <h1>{dataArr?.word}</h1>
+          <h1 className="font-bold text-4xl mb-2 dark:text-white">
+            {dataArr?.word}
+          </h1>
           <p className="text-purple">{dataArr?.phonetic}</p>
         </div>
         <div>
@@ -57,18 +59,26 @@ const WordDefinition = () => {
       </div>
 
       <div>
-        <div className="flex items-center">
-          <p className="mr-4">{dataArr?.meanings[0].partOfSpeech}</p>
-          <div className="h-1 w-full bg-light-gray"></div>
+        <div className="flex items-center mb-8 ">
+          <p className="mr-4 text-black italic font-semibold leading-normal text-lg dark:text-white">
+            {dataArr?.meanings[0].partOfSpeech}
+          </p>
+          <div className="h-1 w-full bg-light-gray dark:bg-black-01"></div>
         </div>
-        <h2 className="text-custom-gray text-base">Meaning</h2>
+        <h2 className="text-custom-gray text-base font-light mb-4">Meaning</h2>
         <ul className="list-disc pl-4  marker:text-purple">
           {dataArr?.meanings[0]?.definitions.map((el, i) => (
-            <li key={i}>{el.definition}</li>
+            <li className="mb-4 dark:text-white" key={i}>
+              {el.definition}
+            </li>
           ))}
         </ul>
-        <div className="flex flex-wrap gap-3">
-          <h3 className="text-custom-gray text-base mr-6">Synonyms</h3>
+        <div className="flex flex-wrap gap-3 mb-8">
+          {dataArr?.meanings[0]?.synonyms.length > 0 && (
+            <h3 className="text-custom-gray text-base mr-6 font-light ">
+              Synonyms
+            </h3>
+          )}
           {dataArr?.meanings[0]?.synonyms.map((el, i) => (
             <span
               className=" text-white bg-purple p-[2px] px-[5px] rounded-full"
@@ -79,19 +89,29 @@ const WordDefinition = () => {
           ))}
         </div>
       </div>
-      <div>
-        <div className="flex items-center">
-          <p className="mr-4">{dataArr?.meanings[1]?.partOfSpeech}</p>
-          <div className="h-1 w-full bg-light-gray"></div>
+      <div className="mb-8">
+        <div className="flex items-center mb-8">
+          <p className="mr-4 text-black italic font-semibold leading-normal text-lg dark:text-white">
+            {dataArr?.meanings[1]?.partOfSpeech}
+          </p>
+          {dataArr?.meanings[1]?.partOfSpeech && (
+            <div className="h-1 w-full bg-light-gray  dark:bg-black-01"></div>
+          )}
         </div>
-        <h2 className="text-custom-gray text-base">Meaning</h2>
+        {dataArr?.meanings[1]?.definitions && (
+          <h2 className="text-custom-gray text-base font-light mb-4">
+            Meaning
+          </h2>
+        )}
         <ul className="list-disc pl-4  marker:text-purple">
           {dataArr?.meanings[1]?.definitions.map((el, i) => (
-            <li key={i}>{el.definition}</li>
+            <li className="mb-4 dark:text-white" key={i}>
+              {el.definition}
+            </li>
           ))}
         </ul>
       </div>
-      <div className="h-1 w-full bg-light-gray"></div>
+      <div className="h-1 w-full bg-light-gray mb-6  dark:bg-black-01"></div>
       <Source URL={dataArr?.sourceUrls} />
     </div>
   );

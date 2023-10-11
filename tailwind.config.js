@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -28,10 +29,14 @@ export default {
         "light-gray-01": "#F4F4F4",
         purple: "#8F19E8",
         " black": "#2D2D2D",
+        "dark-mode": "#050505",
+        "light-black": "#1F1F1F",
+        "black-01": "#3A3A3A",
       },
       spacing: {
         85: "85px",
         3: "3px",
+        9: "9px",
         16: "16px",
         16.45: "16.45px",
         24: "24px",

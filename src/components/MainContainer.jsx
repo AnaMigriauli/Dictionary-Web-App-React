@@ -5,7 +5,7 @@ import { DictionaryContextProvider } from "../contexts/DictionaryContext";
 const DictionaryApp = () => {
   return (
     <DictionaryContextProvider>
-      <div className="w-375 h-1065  bg-white p-6 pb-85">
+      <div className="w-375   bg-white p-6 pb-85 dark:bg-dark-mode">
         <Header />
         <SearchInput />
         <WordDefinition />
