@@ -1,7 +1,6 @@
 import "./App.css";
 import DictionaryApp from "./components/MainContainer";
 import { FontContextProvider } from "./contexts/FontContext";
-import useFontContext from "./hooks/useFontContext";
 
 function App() {
   return (

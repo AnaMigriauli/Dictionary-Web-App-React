@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import bookIcon from "../assets/images/iconoir_book.svg";
 import useFontContext from "../hooks/useFontContext";
 import Select from "react-select";
+
 const options = [
   { value: "serif", label: "serif" },
   { value: "roboto", label: "roboto" },
   { value: "mono", label: "mono" },
 ];
+
 const initialMode = () => {
   const mode = localStorage.getItem("theme");
   return JSON.parse(mode);

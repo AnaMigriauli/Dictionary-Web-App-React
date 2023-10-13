@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useDictionaryContext from "../hooks/useDictionaryContext";
+
 const SearchInput = () => {
   const { setWord } = useDictionaryContext();
   const [inputValue, setInputValue] = useState(" ");

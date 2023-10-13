@@ -44,6 +44,7 @@ export default {
         11: "11px",
         24: "24px",
         24.45: "24.45px",
+        5: "24.4%",
       },
       borderRadius: {
         28: "28px",
