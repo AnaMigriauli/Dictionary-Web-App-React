@@ -2,11 +2,17 @@ import Header from "./Header";
 import SearchInput from "./SearchInput";
 import WordDefinition from "./WordDefinition";
 import { DictionaryContextProvider } from "../contexts/DictionaryContext";
-import Loader from "./Loader";
+import useFontContext from "../hooks/useFontContext";
+
 const DictionaryApp = () => {
+  const { font } = useFontContext();
+
   return (
     <DictionaryContextProvider>
-      <div className="w-375   bg-white p-6 pb-85 dark:bg-dark-mode">
+      <div
+        className="w-full   bg-white p-6 pb-85 dark:bg-dark-mode  "
+        style={{ fontFamily: font }}
+      >
         <Header />
         <SearchInput />
         <WordDefinition />

@@ -2,9 +2,11 @@ import externalLink from "../assets/images/tabler_external-link.svg";
 const Source = ({ URL }) => {
   return (
     URL && (
-      <div>
-        <h4 className="text-custom-gray underline mb-2">Source</h4>
-        <div className="flex gap-9 cursor-pointer ">
+      <div className=" md:flex  md:gap-7">
+        <h4 className="text-custom-gray underline mb-2 md:text-sm md:mb-0">
+          Source
+        </h4>
+        <div className="flex  items-center gap-9 cursor-pointer md:text-sm  ">
           <a
             className="text-black underline dark:text-white "
             href={URL}

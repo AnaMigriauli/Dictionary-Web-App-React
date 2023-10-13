@@ -7,12 +7,13 @@ const SearchInput = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (inputValue.trim().length === 0) {
+    if (inputValue.trim().length > 0) {
+      setIsValid(false);
+      setWord(inputValue);
+      setInputValue(" ");
+    } else {
       setIsValid(true);
-      return;
     }
-    setWord(inputValue);
-    setInputValue(" ");
   };
 
   return (
@@ -20,15 +21,13 @@ const SearchInput = () => {
       <form
         onSubmit={submitHandler}
         className={` ${
-          isValid
-            ? "border border-red border-solid hover:border hover:border-solid hover:border-red "
-            : ""
-        }w-327 h-48 active:border active:border-solid active:border-purple focus:border focus:border-solid focus:border-purple bg-light-gray-01 flex justify-between  pr-24.45  pl-24 rounded-2xl mb-6 dark:bg-light-black`}
+          isValid ? "border border-red border-solid " : ""
+        }w-full h-48 focus:border focus:border-solid focus:border-purple  bg-light-gray-01 flex justify-between  pr-24.45  pl-24 rounded-2xl mb-6 dark:bg-light-black md:h-64 md:mb-16`}
       >
         <input
           type="text"
           placeholder="Search for any word…"
-          className=" bg-light-gray-01 w-5/6 outline-none text-base font-bold caret-purple dark:bg-light-black dark:text-white"
+          className=" bg-light-gray-01 w-5/6 outline-none text-base font-bold caret-purple dark:bg-light-black dark:text-white md:text-xl"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
